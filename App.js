@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import ListItem from "./components/ListItem";
+import articles from "./dummies/articles";
 export default function App() {
   return (
     <View style={styles.container}>
