@@ -45,9 +45,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     padding: 10,
+    justifyContent: "space-between",
   },
   text: {
-    fontSize: 16,
+    fontSize: 15,
   },
   subText: {
     fontSize: 12,
