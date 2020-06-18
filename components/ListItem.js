@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const ListItem = () => {
+const ListItem = (props) => {
   return (
     <View style={styles.itemContainer}>
       <View style={styles.leftContainer}>
@@ -42,7 +42,7 @@ const ListItem = () => {
         <Text numberOfLines={3} style={styles.text}>
           これがあああああああああああああああ、カットされるみたいなんだけど、どうあらおうだああああああああああああああうおおおおおおおおおおおおおおおおおおお
         </Text>
-        <Text style={styles.subText}>ReactNews</Text>
+        <Text style={styles.subText}>{props.author}</Text>
       </View>
     </View>
   );

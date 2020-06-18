@@ -4,7 +4,7 @@ import ListItem from "./components/ListItem";
 export default function App() {
   return (
     <View style={styles.container}>
-      <ListItem />
+      <ListItem author="ReactNews" />
     </View>
   );
 }
