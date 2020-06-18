@@ -36,12 +36,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   leftContainer: {
-    backgroundColor: "blue",
     width: 100,
     height: "100%",
   },
   rightContainer: {
-    backgroundColor: "red",
     flex: 1,
     height: "100%",
   },
