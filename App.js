@@ -4,7 +4,11 @@ import ListItem from "./components/ListItem";
 export default function App() {
   return (
     <View style={styles.container}>
-      <ListItem author="ReactNews" />
+      <ListItem
+        imageUrl="https://picsum.photos/200/300"
+        text="あああああああああああああああ、カットされるみたいなんだけど、どうあらおうだああああああああああああああうおおおおおおおおおおおおおおおおおおお"
+        author="ReactNews"
+      />
     </View>
   );
 }
