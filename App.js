@@ -1,25 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
-
+import ListItem from "./components/ListItem";
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.itemContainer}>
-        <View style={styles.leftContainer}>
-          <Image
-            style={{ width: 100, height: 100 }}
-            source={{
-              uri: "https://picsum.photos/200/300",
-            }}
-          />
-        </View>
-        <View style={styles.rightContainer}>
-          <Text numberOfLines={3} style={styles.text}>
-            これがあああああああああああああああ、カットされるみたいなんだけど、どうあらおうだああああああああああああああうおおおおおおおおおおおおおおおおおおお
-          </Text>
-          <Text style={styles.subText}>ReactNews</Text>
-        </View>
-      </View>
+      <ListItem />
     </View>
   );
 }
