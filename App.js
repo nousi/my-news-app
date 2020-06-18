@@ -14,7 +14,10 @@ export default function App() {
           />
         </View>
         <View style={styles.rightContainer}>
-          <Text>ここが変更される</Text>
+          <Text numberOfLines={3}>
+            これがあああああああああああああああ、カットされるみたいなんだけど、どうあらおうだああああああああああああああうおおおおおおおおおおおおおおおおおおお
+          </Text>
+          <Text>ReactNews</Text>
         </View>
       </View>
     </View>
@@ -37,10 +40,9 @@ const styles = StyleSheet.create({
   },
   leftContainer: {
     width: 100,
-    height: "100%",
   },
   rightContainer: {
     flex: 1,
-    height: "100%",
+    flexDirection: "column",
   },
 });
