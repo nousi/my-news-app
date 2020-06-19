@@ -5,21 +5,18 @@ import dummyarticles from "./dummies/articles";
 import Constants from "expo-constants";
 import axios from "axios";
 
-const URL = `https://newsapi.org/v2/top-headlines？country=jp＆apiKey=${Constants.manifest.extra.newsApiKey}`;
+const URL = `http://newsapi.org/v2/top-headlines?country=jp&apiKey=${Constants.manifest.extra.newsApiKey}`;
 
 export default function App() {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setArticles(dummyarticles);
-    }, 2000);
-    return () => clearTimeout(timer);
+    fetchArticles();
   }, []);
 
   const fetchArticles = async () => {
     try {
       const response = await axios.get(URL);
-      console.log(response);
+      setArticles(response.data.articles);
     } catch (error) {
       console.error(error);
     }
