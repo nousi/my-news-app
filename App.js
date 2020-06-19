@@ -1,11 +1,24 @@
-import React from "react";
-import { StyleSheet, FlatList, View } from "react-native";
+import React, { useState, useEffect } from "react";
+import { StyleSheet, FlatList, SafeAreaView } from "react-native";
 import ListItem from "./components/ListItem";
-import articles from "./dummies/articles";
+import dummyarticles from "./dummies/articles";
+import Constants from "expo-constans";
+import axios from "axios";
+
+const URL = `https://newsapi.org/v2/top-headlines？country=jp＆apiKey=${Constants.mainifest.extra.newsApiKey}`;
 
 export default function App() {
+  const [articles, setArticles] = useState([]);
+  useEffect(() => {
+    alert(Constants.mainifest.extra.newsApiKey);
+    const timer = setTimeout(() => {
+      setArticles(dummyarticles);
+      alert("更新");
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <FlatList
         data={articles}
         renderItem={({ item }) => (
@@ -17,7 +30,7 @@ export default function App() {
         )}
         keyExtractor={(item, index) => index.toString()}
       />
-    </View>
+    </SafeAreaView>
   );
 }
 
