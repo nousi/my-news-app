@@ -7,6 +7,7 @@ import axios from "axios";
 import HomeScreen from "./screens/HomeScreen";
 
 const URL = `http://newsapi.org/v2/top-headlines?country=jp&apiKey=${Constants.manifest.extra.newsApiKey}`;
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
