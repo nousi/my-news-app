@@ -4,8 +4,6 @@ import { WebView } from "react-native-webview";
 
 export default ArticleScreen = ({ route }) => {
   const { article } = route.params;
-  console.log(article);
-
   return (
     <SafeAreaView style={styles.container}>
       <WebView source={{ uri: article.url }} />
