@@ -27,9 +27,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const ListItem = ({ imageUrl, text, author }) => {
+const ListItem = ({ imageUrl, text, author, onPress }) => {
   return (
-    <TouchableOpacity style={styles.itemContainer}>
+    <TouchableOpacity style={styles.itemContainer} onPress={onPress}>
       <View style={styles.leftContainer}>
         {!!imageUrl && (
           <Image
