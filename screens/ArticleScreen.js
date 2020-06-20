@@ -1,11 +1,11 @@
 import React from "react";
-import { StyleSheet, Text, SafeAreaView } from "react-native";
+import { StyleSheet, SafeAreaView } from "react-native";
 import { WebView } from "react-native-webview";
 
 export default ArticleScreen = () => {
   return (
-    <SafeAreaView>
-      <WebView source={{ uri: "https://expo.io" }} style={{ marginTop: 20 }} />
+    <SafeAreaView style={styles.container}>
+      <WebView source={{ uri: "https://expo.io" }} />
     </SafeAreaView>
   );
 };
