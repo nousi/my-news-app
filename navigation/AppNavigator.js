@@ -13,9 +13,13 @@ export default AppNavigator = () => {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          option={{ headerShown: false }}
+          options={{ title: "記事一覧" }}
         />
-        <Stack.Screen name="Article" component={ArticleScreen} />
+        <Stack.Screen
+          name="Article"
+          component={ArticleScreen}
+          options={{ title: "記事" }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
