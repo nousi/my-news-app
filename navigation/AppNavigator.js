@@ -11,6 +11,10 @@ const Stack = createStackNavigator();
 export default AppNavigator = () => {
   return (
     <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
       <Stack.Navigator>
         <Stack.Screen
           name="Home"
