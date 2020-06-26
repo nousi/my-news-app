@@ -10,7 +10,10 @@ const reducer = (state, action) => {
         clips: [...state.clips, action.clip],
       };
     case "DELETE_CLIP":
-      return {};
+      return {
+        ...state,
+        clips: state.clips.filter((clip) => clip.url !== action.clip.url),
+      };
     default:
       return state;
   }
