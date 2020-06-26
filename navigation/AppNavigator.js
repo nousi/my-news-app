@@ -33,12 +33,17 @@ const ClipStack = () => {
         component={ClipScreen}
         options={{ title: "保存した記事" }}
       />
+      <Stack.Screen
+        name="Article"
+        component={ArticleScreen}
+        options={{ title: "記事" }}
+      />
     </Stack.Navigator>
   );
 };
 
 const screenOption = ({ route }) => ({
-  tabBarIcon: ({ focused, color, size }) => {
+  tabBarIcon: ({ color, size }) => {
     let iconName;
 
     if (route.name === "Home") {
