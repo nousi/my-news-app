@@ -7,26 +7,30 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
+const HomeStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{ title: "記事一覧" }}
+      />
+      <Stack.Screen
+        name="Article"
+        component={ArticleScreen}
+        options={{ title: "記事" }}
+      />
+    </Stack.Navigator>
+  );
+};
 
 export default AppNavigator = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home" component={HomeStack} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: "記事一覧" }}
-        />
-        <Stack.Screen
-          name="Article"
-          component={ArticleScreen}
-          options={{ title: "記事" }}
-        />
-      </Stack.Navigator>
     </NavigationContainer>
   );
 };
