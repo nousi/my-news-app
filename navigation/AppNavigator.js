@@ -5,6 +5,7 @@ import HomeScreen from "../screens/HomeScreen";
 import ClipScreen from "../screens/ClipScreen";
 import ArticleScreen from "../screens/ArticleScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Ionicons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
