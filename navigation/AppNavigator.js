@@ -29,7 +29,6 @@ export default AppNavigator = () => {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Home" component={HomeStack} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
